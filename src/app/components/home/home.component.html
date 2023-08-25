@@ -1,6 +1,6 @@
 <div class="container mt-3 p-3">
     <div class="row">
-        <div class="col-6 ">
+        <div class="col-md-6 col-sm-12">
             <div class="alert alert-warning">
                 <h4 class="text text-center text-uppercase">
                     about us 
@@ -15,8 +15,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="alert alert-primary">
+        <div class="col-md-6 col-sm-12">
+            <div class="alert alert-warning">
                 <h4 class="text text-center text-uppercase">
                     how to reach
                 </h4>
@@ -24,7 +24,11 @@
                 <table class="table table-striped">
                     <tr>
                         <th>Nearest Bus Stops</th>
-                        <td colspan="2">Kshirpai Chowkan, Kshirpai Halderdighi</td>
+                        <td colspan="2">
+                            <span data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Click for Directions">Kshirpai Chowkan</span>
+                            <span data-bs-toggle="modal" data-bs-target="#staticBackdrop">Kshirpai Halderdighi</span>
+                            <!-- Kshirpai Chowkan, Kshirpai Halderdighi -->
+                        </td>
                     </tr>
                     <tr>
                         <th>Nearest Railway Station</th>
@@ -35,32 +39,31 @@
                         <th>Nearest Airport</th>
                         <td colspan="2">Netaji Subhas Chandra Bose International Airport, Kolkata</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <th>Nearest Waterway</th>
                         <td colspan="2">The rivers, canals and water streams found in the vicinity are used for drainage and irrigation purposes.</td>
-                    </tr>
+                    </tr> -->
                 </table>
                 <hr/>
                 <div class="text text-center">
-                    <button class="btn btn-primary m-3" (click)="locateUs()"><strong>Click To Locate Us</strong></button>
-                    <button class="btn btn-primary m-3" (click)="showDirections()"><strong>Click for Directions</strong></button>
-                    <!-- <iframe width="600" height="277" src="https://www.youtube.com/embed/G-_p_90sdVw" title="Ranabeshe Heshe Heshe Oi Bama Eseche | Shyama Sangeet | Sung by Swami Sarvagananda Ji" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <a class="btn btn-warning m-3" href="https://maps.google.com/" target="_blank" title="Google Maps - Opens in an external tab"><strong>Click To Locate Us</strong></a>
+                    <!-- <button class="btn btn-primary m-3" (click)="showDirections()"><strong>Click for Directions</strong></button> -->
                 </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-6">
-            <div class="alert alert-secondary">
+        <div class="col-sm-12 col-md-12">
+            <div class="alert alert-warning">
                 <h4 class="text text-center text-uppercase">
-                    calendar
+                    festival calendar
                 </h4>
                 <hr/>
-                <iframe src="https://calendar.google.com/calendar/embed?src=en.indian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="600" height="480" frameborder="0" scrolling="no"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=en.indian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="100%" height="480" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
-        <div class="col-6">
+        <!-- <div class="col-6">
             <div class="alert alert-dark">
                 <h4 class="text text-center text-uppercase">
                     festivals &amp; events
@@ -92,6 +95,24 @@
                 <button type="button" class="btn btn-warning m-3">Warning</button>
                 <button type="button" class="btn btn-danger m-3">Danger</button>                
             </div>
-        </div>
+        </div> -->
     </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
