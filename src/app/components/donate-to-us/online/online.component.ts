@@ -43,7 +43,7 @@ export class OnlineComponent {
   constructor(private razorpayService: RazorpayService) { }
 
   initiatePayment() {
-    this.razorpayService.createOrder('', 'INR')
+    this.razorpayService.createOrder('100', 'INR')
       .then((response) => {
         console.log('Payment successful:', response);
         // Handle success
